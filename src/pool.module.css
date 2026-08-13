@@ -1,0 +1,277 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* کارت اصلی */
+.card {
+  width: min(550px, 92vw);
+  min-height: 400px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 30px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* عنوان */
+.card h1 {
+  color: #2d3748;
+  font-size: clamp(32px, 3.2vw, 52px);
+  margin: 10px 0 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* بخش دکمه‌ها */
+.buttons {
+  position: relative;
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  flex-direction: row;
+}
+
+/* دکمه آره */
+.yesButton {
+  width: 110px;
+  height: 55px;
+
+  border: none;
+  border-radius: 15px;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #00b894, #00a381);
+  color: white;
+
+  z-index: 2;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.yesButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 184, 148, 0.5);
+}
+
+/* دکمه نه */
+.noButton {
+  width: 110px;
+  height: 55px;
+
+  border: none;
+  border-radius: 15px;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #fd79a8, #e84393);
+  color: white;
+
+  z-index: 10;
+
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.3s ease;
+
+  box-shadow: 0 4px 15px rgba(232, 67, 147, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.noButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(232, 67, 147, 0.6);
+}
+
+/* صفحه موفقیت */
+.successCard {
+  width: 100%;
+  color: #2d3748;
+}
+
+.successCard h2 {
+  font-size: clamp(24px, 2.5vw, 30px);
+  margin-bottom: 25px;
+  color: #2d3748;
+}
+
+.accountNumber {
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: clamp(20px, 2.4vw, 32px);
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+
+  padding: 18px 20px;
+  border-radius: 12px;
+
+  margin-bottom: 25px;
+
+  direction: ltr;
+
+  display: inline-block;
+
+  white-space: nowrap;
+}
+
+.successCard h3 {
+  font-size: clamp(20px, 2.2vw, 26px);
+  margin-bottom: 50px;
+  color: #2d3748;
+}
+
+.successCard p {
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: #636e72;
+  line-height: 2;
+}
+
+
+/* =========================================
+   مانیتورهای بزرگ
+   ========================================= */
+
+@media (min-width: 1600px) {
+  .card {
+    width: 550px;
+    min-height: 420px;
+  }
+}
+
+
+/* =========================================
+   لپ‌تاپ و مانیتورهای متوسط
+   ========================================= */
+
+@media (max-width: 900px) {
+  .card {
+    width: min(500px, 90vw);
+    min-height: 380px;
+    padding: 40px 30px;
+  }
+
+  .card h1 {
+    margin-bottom: 40px;
+  }
+}
+
+
+/* =========================================
+   موبایل
+   ========================================= */
+
+@media (max-width: 600px) {
+  .page {
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 350px;
+    padding: 35px 20px;
+    border-radius: 24px;
+  }
+
+  .card h1 {
+    font-size: 34px;
+    margin: 5px 0 35px;
+  }
+
+  .buttons {
+    height: 90px;
+  }
+
+  .yesButton,
+  .noButton {
+    width: 95px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .accountNumber {
+    font-size: 19px;
+    letter-spacing: 1.5px;
+    padding: 15px 10px;
+  }
+
+  .successCard h3 {
+    font-size: 21px;
+    margin-bottom: 35px;
+  }
+
+  .successCard p {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================
+   موبایل‌های خیلی کوچک
+   ========================================= */
+
+@media (max-width: 380px) {
+  .card {
+    padding: 30px 15px;
+  }
+
+  .card h1 {
+    font-size: 29px;
+  }
+
+  .yesButton,
+  .noButton {
+    width: 85px;
+    height: 48px;
+    font-size: 19px;
+  }
+
+  .accountNumber {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
